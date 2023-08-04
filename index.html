@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+
+<style>
+   body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      display: inline-block;
+      margin-bottom: 20vh;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+      backdrop-filter: blur(10px); /* Glass effect */
+      margin: 10vh 0 0 32vw ;
+      
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input[type="password"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 2vh;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: #f44336;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dua {
+      width: 34.5vw;
+      height: 50vh;
+      margin: 5vh 0 0 27vw;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 0 5vw 0 5vw;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    }
+
+    .dua p {
+      text-align: center;
+      padding: 5vh 0 0 0;
+    }
+
+    .dua img {
+      width: 30vw;
+      padding: 0 0 0 2vw;
+    }
+
+.overlay {
+    width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0);
+	z-index: 9999;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.overlay h1 {
+    color: white;
+}
+
+/* ----------------------------------- */
+
+@media screen and (max-width : 800px) {
+    .overlay {
+    height:auto;
+	width: auto;
+	bottom: 0;
+	right: 0;
+	background-color: black
+    }
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="overlay">
+    <h1>Dibilangin buka pake laptop!!</h1>
+    <a href="https://i.pinimg.com/564x/71/9c/10/719c10fb577785c70c66e50c24381e0c.jpg"><h2>😜😏</h2></a>
+</div>
+
+
+<div class="container">
+    <h1>Selamat datang di WEDIA - Website Hadiah Anda</h1>
+    <div>
+      <label for="password">Masukin Password:</label>
+      <input type="password" id="password" />
+      <button onclick="checkPassword()">Submit</button>
+      <div class="error" id="error-message"></div>
+    </div>
+  </div>
+
+  <div class="dua">
+    <p>
+      Sebelum mendapatkan hadiah, kamu harus melewati Riddle Game ini! Langkah pertama, scan qr dibawah ini:
+    </p>
+
+    <img src="https://i.ibb.co/cgv8gBx/spt.jpg" alt="">
+
+    <p>Carilah username instagram berdasarkan kumpulan lagi tersebut! lalu lanjutkan!</p>
+  </div>
+
+</body>
+<script>
+    function checkPassword() {
+      var enteredPassword = document.getElementById("password").value;
+
+      if (enteredPassword === "mm" || enteredPassword === "MM") {
+        window.location.href = "https://alvinpanjaitan.github.io/hbdbrok/"; // Replace this with the link you want to redirect to
+      } else {
+        document.getElementById("error-message").textContent = "Incorrect password. Please try again.";
+      }
+    }
+  </script>
+</html>
